@@ -1,6 +1,6 @@
 //Capturar el elemento
 const btn=document.querySelector('#btn')
-
+//evento
 btn.addEventListener('click',agregarLista)
 
 function agregarLista(e){

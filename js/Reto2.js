@@ -1,6 +1,7 @@
+//Agregar evento
 let calculadora=document.querySelector('#calculadora')
 calculadora.addEventListener('click',obtenerValor)
-
+//Ejecutar evento
 let resultado=document.querySelector('#Resultado')
 let operActual='';
 let operAnterior='';

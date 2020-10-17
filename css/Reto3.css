@@ -58,7 +58,7 @@ body{
     counter-increment: my-counter;
 }
 .TareaLista-item--NoCompletado{
-    background-color: #ff4d4d;
+    background-color: red;
 }
 .TareaLista-item--Completado{
     background-color: #008000;
