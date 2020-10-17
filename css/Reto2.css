@@ -1,0 +1,124 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: #d9d9d9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.contenedor{
+    display: grid;
+    grid-template-columns: 50px 50px 50px 50px ;
+    grid-template-rows: 50px 50px 50px 50px 50px;
+    grid-template-areas: 'input input input input'
+                        'uno dos tres suma'
+                        'cuatro cinco seis menos'
+                        'siete ocho nueve multi'
+                        'reset cero igual divi'   ;
+                        
+    grid-gap: 1em;
+                    }
+.contenedor-seccion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+                    }
+.contenedor-seccion:nth-child(1) {
+    grid-area: input;
+    background-color: red;
+}
+.contenedor-seccion:nth-child(2) {
+    grid-area: uno;
+    background-color: red;
+}
+.contenedor-seccion:nth-child(3) {
+    grid-area: dos;
+    background-color: red;
+}
+.contenedor-seccion:nth-child(4) {
+    grid-area: tres;
+    background-color: red;
+}
+.contenedor-seccion:nth-child(5) {
+    grid-area: suma;
+    background-color: red;
+}
+.contenedor-seccion:nth-child(6) {
+    grid-area: cuatro;
+    background-color: red;
+}
+.contenedor-seccion:nth-child(7) {
+    grid-area: cinco;
+    background-color: red;
+  
+}
+.contenedor-seccion:nth-child(8) {
+    grid-area: seis;
+    background-color: red;
+  
+}
+.contenedor-seccion:nth-child(9) {
+    grid-area: menos;
+    background-color: red;
+
+}
+.contenedor-seccion:nth-child(10) {
+    grid-area: siete;
+    background-color: red;
+
+}
+.contenedor-seccion:nth-child(11) {
+    grid-area: ocho;
+    background-color: red;
+
+}
+.contenedor-seccion:nth-child(12) {
+    grid-area: nueve;
+    background-color: red;
+
+}
+.contenedor-seccion:nth-child(13) {
+    grid-area: multi;
+    background-color: red;
+
+}
+.contenedor-seccion:nth-child(14) {
+    grid-area: reset;
+    background-color: red;
+
+}
+.contenedor-seccion:nth-child(15) {
+    grid-area: cero;
+    background-color: red;
+
+}
+.contenedor-seccion:nth-child(16) {
+    grid-area: igual;
+    background-color: red;
+
+}
+.contenedor-seccion:nth-child(17) {
+    grid-area: divi;
+    background-color: red;
+
+}
+
+button{
+    width: 100%;
+    height: 100%;
+}
+button:hover{
+    background-color: #8d8d8d;
+}
+input{
+    width: 100%;
+    height: 100%;
+}
+
+
