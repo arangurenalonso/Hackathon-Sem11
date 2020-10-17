@@ -1,5 +1,5 @@
+//Capturar el elemento
 const btn=document.querySelector('#btn')
-
 
 btn.addEventListener('click',agregarLista)
 
@@ -39,6 +39,7 @@ function agregarCompletado(e){
         eliminarLista(listaAEliminar)
     }
 }
+
 
 function eliminarLista(lista){
     const padre=lista.parentElement;
