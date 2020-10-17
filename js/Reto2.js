@@ -9,10 +9,10 @@ let operacion=undefined;
 
 function obtenerValor(e){
     e.preventDefault();
-    console.log(e.target.innerText=="+")
    
     if(e.target.classList.contains('Borrar')){
         limpiarpantalla();
+        actualizarDisplay();
    }
    if(e.target.classList.contains('numero')){
         Resultado= e.target.innerText
@@ -24,33 +24,30 @@ function obtenerValor(e){
    }  
    if(e.target.classList.contains('igual')){
     Resultado3= e.target.innerText
-    seleccionoigual(Resultado3)
+    calcular()
+    actualizarDisplay()
    }
   
 }
-function seleccionarOperacion(op){
+function seleccionarOperacion(signoOperacion){
+    operacion=signoOperacion;
     if(operActual===""){
         return
    }else{
-    console.log("seleccionarOperacion")
-    console.log(op=="+")
-       calcular(op)
+       calcular()
    }
-   operacion=op.toString();
-   operAnterior=operActual;
+      operAnterior=operActual;
    operActual='';
 }
-function calcular(resultado){
+function calcular(){
     let calculo;
     let anterior=parseFloat(operAnterior);
-    console.log(anterior)
     let actual=parseFloat(operActual);
-    console.log(actual)
 
     if(isNaN(anterior)||isNaN(actual)){
         return
     }
-    switch(resultado){
+    switch(operacion){
         case "+":calculo = anterior+actual;
         break;
         case "-":calculo = anterior-actual;
@@ -59,10 +56,10 @@ function calcular(resultado){
         break;
         case "/":calculo = anterior/actual;
         break;
-        default: calculo="hubo un error"
+        default: return;
     }
     operActual=calculo
-    operacion=undefined;
+    operacion=undefined
     operAnterior=''
 }
 
@@ -70,17 +67,13 @@ function agregarNumero(num){
     operActual=operActual.toString()+num.toString();
     actualizarDisplay();
 }   
-function actualizarDisplay(){
-    resultado.value=operActual
-}
 function limpiarpantalla(){
-    resultado.value=""
     operActual='';
     operAnterior='';
     operacion=undefined;
+
 }
-function seleccionoigual(igual){
-    actualizarDisplay()
+function actualizarDisplay(){    
+    resultado.value=operActual
 }
 
-limpiarpantalla()
